@@ -1,0 +1,212 @@
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+  <h3>c3-directive works!</h3>
+    
+  <ul>
+      <li>deepak</li>
+      <li>rohan</li>
+      <li>manpreet</li>
+      <li>manpreet</li>
+  </ul>
+
+<ul>
+    <li *ngFor="let user of users">{{user}}</li>
+</ul>
+
+<table class="table table-bordered table-dark ">
+    <tr class="bg-primary">
+      <th>id</th>
+      <th>catName</th>
+      <th>image</th>
+      <th>desc</th>
+      <th>image</th>
+    </tr>
+    <tr *ngFor="let p of categories">
+        <td>{{p.id}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.img}}</td>
+        <td>{{p.desc}}</td>
+        <td><img src='assets/images/{{p.img}}'/></td>
+    </tr>
+
+</table>
+
+<div *ngIf="categories2.length">
+
+
+<table border="1">
+    <tr>
+      <th>id</th>
+      <th>catName</th>
+      <th>image</th>
+      <th>desc</th>
+      <th>image</th>
+    </tr>
+    <tr *ngFor="let p of categories2">
+        <td>{{p.id}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.img}}</td>
+        <td>{{p.desc}}</td>
+        <td><img src='assets/images/{{p.img}}'/></td>
+    </tr>
+
+</table>
+</div>
+<div *ngIf="categories2.length<1">
+  <p class="alert alert-danger">No items found</p>
+</div>
+<p>................</p>
+<div *ngIf="categories2.length else falsecondn">
+    
+    
+    <table border="1">
+        <tr>
+          <th>id</th>
+          <th>catName</th>
+          <th>image</th>
+          <th>desc</th>
+          <th>image</th>
+        </tr>
+        <tr *ngFor="let p of categories2">
+            <td>{{p.id}}</td>
+            <td>{{p.name}}</td>
+            <td>{{p.img}}</td>
+            <td>{{p.desc}}</td>
+            <td><img src='assets/images/{{p.img}}'/></td>
+        </tr>
+    
+    </table>
+    </div>
+    <ng-template #falsecondn>
+<p class="alert alert-danger">no item found</p>
+    </ng-template>
+<p>
+  #..........#.usign ngfor and ngif simulatneously and ngtemplate....#...............</p>
+<table class="table table-border">
+    <tr class="bg-warning">
+        <th>prodid</th>
+        <th>catid</th>
+        <th>prodname</th>
+        <th>prodimg</th>
+        <th>prod desc</th>
+        <th>prod price</th>
+        <th>prod qty</th>
+    </tr>
+    <ng-container *ngFor="let p of products" >
+    <tr class="bg-success" *ngIf="p.price>=10000">
+
+        <th>{{p.pid}}</th>
+        <th>{{p.catid}}</th>
+        <th>{{p.name}}</th>
+        <th>{{p.img}}</th>
+        <th>{{p.desc}}</th>
+        <th>{{p.price}}</th>
+        <th>{{p.qty}}</th>
+    </tr>
+  </ng-container>
+
+</table>
+#......#.....using and or >= etc conditions........#.................#<br>
+<table class="table table-border">
+    <tr class="bg-warning">
+        <th>prodid</th>
+        <th>catid</th>
+        <th>prodname</th>
+        <th>prodimg</th>
+        <th>prod desc</th>
+        <th>prod price</th>
+        <th>prod qty</th>
+    </tr>
+    <ng-container *ngFor="let p of products" >
+     <tr class="bg-success" *ngIf="p.pid==5 && p.price>=30000 && p.catid==3  || p.pid>=6" > 
+        
+        <th>{{p.pid}}</th>
+        <th>{{p.catid}}</th>
+        <th>{{p.name}}</th>
+        <th>{{p.img}}</th>
+        <th>{{p.desc}}</th>
+        <th>{{p.price}}</th>
+        <th>{{p.qty}}</th>
+    </tr>
+    <tr class="bg-primary" *ngIf="p.pid==6" > 
+        
+        <th>{{p.pid}}</th>
+        <th>{{p.catid}}</th>
+        <th>{{p.name}}</th>
+        <th>{{p.img}}</th>
+        <th>{{p.desc}}</th>
+        <th>{{p.price}}</th>
+        <th>{{p.qty}}</th>
+    </tr>
+  </ng-container>
+
+</table>
+
+<br>#........odd rows only..#.....#...............<br>
+<table class="table table-border">
+    <tr class="bg-warning">
+        <th>prodid</th>
+        <th>catid</th>
+        <th>prodname</th>
+        <th>prodimg</th>
+        <th>prod desc</th>
+        <th>prod price</th>
+        <th>prod qty</th>
+    </tr>
+    <ng-container *ngFor="let p of products" >
+    <tr class="bg-success" *ngIf="p.pid%2==1">
+
+        <th>{{p.pid}}</th>
+        <th>{{p.catid}}</th>
+        <th>{{p.name}}</th>
+        <th>{{p.img}}</th>
+        <th>{{p.desc}}</th>
+        <th>{{p.price}}</th>
+        <th>{{p.qty}}</th>
+    </tr>
+  </ng-container>
+
+</table>
+<br>#........switch case ng switch..#.....#...............<br>
+<table class="table table-border">
+    <tr class="bg-warning">
+        <th>prodid</th>
+        <th>catid</th>
+        <th>prodname</th>
+        <th>prodimg</th>
+        <th>prod desc</th>
+        <th>prod price</th>
+        <th>prod qty</th>
+    </tr>
+    <ng-container *ngFor="let p of products" [ngSwitch]="p.catid" >
+    <tr class="bg-success" *ngSwitchCase='1'>
+
+        <th>{{p.pid}}</th>
+        <th>{{p.catid}}</th>
+        <th>{{p.name}}</th>
+        <th>{{p.img}}</th>
+        <th>{{p.desc}}</th>
+        <th>{{p.price}}</th>
+        <th>{{p.qty}}</th>
+    </tr>
+    <tr class="bg-danger" *ngSwitchCase='3'>
+        
+                <th>{{p.pid}}</th>
+                <th>{{p.catid}}</th>
+                <th>{{p.name}}</th>
+                <th>{{p.img}}</th>
+                <th>{{p.desc}}</th>
+                <th>{{p.price}}</th>
+                <th>{{p.qty}}</th>
+    </tr>
+  </ng-container>
+
+</table>

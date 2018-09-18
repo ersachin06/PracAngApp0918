@@ -1,0 +1,17 @@
+<p>
+  c1 works!
+  <b>Welecome {{username}}</b><br>
+  <img src="assets/images/n1.jpg"/>
+  <br>
+  <img src={{logourl}}/><br>
+  <button disabled={{btnStatus}}>Login1</button>
+  <!-- if we want to attach behaviour on disabled - which is a html property we shuould use property binding - in order to adapt the changes. -->
+  <button [disabled]="btnStatus">Login2</button>
+  <br>
+  <button (click)="changeName()"> change name</button>
+  <br>
+ 
+</p>
+<br>
+<input type="text" [(ngModel)]="strNm"/>
+<p>you entered is  {{strNm}}</p>

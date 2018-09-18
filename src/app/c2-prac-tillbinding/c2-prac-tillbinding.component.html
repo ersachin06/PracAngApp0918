@@ -1,0 +1,14 @@
+
+<p>
+  <b>c2-prac-tillbinding works!<br></b>
+  welcome <b>{{username}}</b><br>
+  <img src="assets/images/n1.jpg"/><br>
+  <img src={{logoUrl}}/><br>
+  <img [src]="logoUrl"/><br>
+  <button disabled={{btnStatus}}>Login Btn</button>
+  <button [disabled]="btnStatus">Login Btn</button>
+  <button (click)="changeName()">change Name</button>
+  <input type="text" [(ngModel)]="strName"/>
+  you entered is {{strName}}
+
+</p>
