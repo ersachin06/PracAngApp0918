@@ -1,0 +1,92 @@
+
+ <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+ <h3> c4directive-re works!</h3>
+
+
+<ul>
+<li>deepak</li>
+<li>rohan</li>
+<li>sohan</li>
+<li>mohan</li>
+
+</ul>
+
+<ul>
+  <li *ngFor="let u of users">{{u}}</li>
+</ul>
+
+<table class="table table-bordered">
+<tr class="bg-primary">
+  <td>catid</td>
+  <td>cat name</td>
+  <td>cat image</td>
+  <td>cat desc</td>
+</tr>
+<tr *ngFor="let c of categories">
+  <td>{{c.id}}</td>
+  <td>{{c.name}}</td>
+  <td><img src='assets/images/{{c.img}}'/></td>
+  <td>{{c.desc}}</td>
+</tr>
+</table>
+
+if lengt is greate than 1 than only show the table
+<div *ngIf="categories2.length>1">
+
+
+<table class="table table-bordered">
+  <tr class="bg-primary">
+    <td>catid</td>
+    <td>cat name</td>
+    <td>cat image</td>
+    <td>cat desc</td>
+  </tr>
+  <tr *ngFor="let c of categories">
+    <td>{{c.id}}</td>
+    <td>{{c.name}}</td>
+    <td><img src='assets/images/{{c.img}}'/></td>
+    <td>{{c.desc}}</td>
+  </tr>
+  </table>
+</div>
+
+<div *ngIf="categories2.length<1" class="bg-danger">
+  <p class="alert alert-success">no records found</p>
+</div>
+
+template reference variable false conditoin else part ng if
+
+<div *ngIf="categories2.length>1 else falsecondn">
+
+
+    <table class="table table-bordered">
+        <tr class="bg-primary">
+          <td>catid</td>
+          <td>cat name</td>
+          <td>cat image</td>
+          <td>cat desc</td>
+        </tr>
+        <tr *ngFor="let c of categories">
+          <td>{{c.id}}</td>
+          <td>{{c.name}}</td>
+          <td><img src='assets/images/{{c.img}}'/></td>
+          <td>{{c.desc}}</td>
+        </tr>
+        </table>
+</div>
+<ng-template #falsecondn>
+  <div >
+    <p class="alert alert-danger">no records found inside false condition</p>
+  </div>
+</ng-template>
+

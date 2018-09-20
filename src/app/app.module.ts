@@ -10,6 +10,9 @@ import { UserstempComponent } from './userstemp/userstemp.component';
 import { Userstemp11Component } from './userstemp11/userstemp11.component';
 import { Userstemp12Component } from './userstemp12/userstemp12.component';
 import { Temp11Component } from './temp11/temp11.component';
+import { C4directiveReComponent } from './c4directive-re/c4directive-re.component';
+import { C5AtbtDirectiveComponent } from './c5-atbt-directive/c5-atbt-directive.component';
+import { C6imgdispthclickComponent } from './c6imgdispthclick/c6imgdispthclick.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +22,10 @@ import { Temp11Component } from './temp11/temp11.component';
     UserstempComponent,
     Userstemp11Component,
     Userstemp12Component,
-    Temp11Component
+    Temp11Component,
+    C4directiveReComponent,
+    C5AtbtDirectiveComponent,
+    C6imgdispthclickComponent
   ],
   imports: [
     BrowserModule,
