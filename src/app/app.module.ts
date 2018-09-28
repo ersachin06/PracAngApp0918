@@ -13,6 +13,10 @@ import { Temp11Component } from './temp11/temp11.component';
 import { C4directiveReComponent } from './c4directive-re/c4directive-re.component';
 import { C5AtbtDirectiveComponent } from './c5-atbt-directive/c5-atbt-directive.component';
 import { C6imgdispthclickComponent } from './c6imgdispthclick/c6imgdispthclick.component';
+import { C7inbuiltpipesComponent } from './c7inbuiltpipes/c7inbuiltpipes.component';
+import { CustomPipe,CustomJSONPipe,FilterPipe } from './pipes/custom.pipe';
+import { C8custompipesComponent } from './c8custompipes/c8custompipes.component';
+import { CustomeJsonPipePipe } from './pipes/custome-json-pipe.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +29,13 @@ import { C6imgdispthclickComponent } from './c6imgdispthclick/c6imgdispthclick.c
     Temp11Component,
     C4directiveReComponent,
     C5AtbtDirectiveComponent,
-    C6imgdispthclickComponent
+    C6imgdispthclickComponent,
+    C7inbuiltpipesComponent,
+    CustomPipe,
+    C8custompipesComponent,
+    CustomeJsonPipePipe,
+    CustomJSONPipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

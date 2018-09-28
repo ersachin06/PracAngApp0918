@@ -1,19 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-c6imgdispthclick',
-  templateUrl: './c6imgdispthclick.component.html',
-  styleUrls: ['./c6imgdispthclick.component.css']
+  selector: 'app-c8custompipes',
+  templateUrl: './c8custompipes.component.html',
+  styleUrls: ['./c8custompipes.component.css']
 })
-export class C6imgdispthclickComponent implements OnInit {
+export class C8custompipesComponent implements OnInit {
 
+  username:string="icsdtechlabs - custom pipe";
   constructor() { }
 
   ngOnInit() {
   }
-
-
-
   emp:any[]=[
     {
       EMPNO:7369,
@@ -156,29 +154,5 @@ export class C6imgdispthclickComponent implements OnInit {
       DEPTNO:10
     }
   ];
-  usersLogoHeight:number=100;
-  usersLogoWidth:number=100;
-  isBtnVisible:boolean=true;
-
-  users:any[]=[
-  
-    {usersLogo:'assets/images/a1.jpg',id:1,department:'IT',name:'john',salary:20000},    
-    {usersLogo:'assets/images/l2.jpg',id:2,department:'IT',name:'Alisha',salary:10000},
-    {usersLogo:'assets/images/b3.jpg',id:3,department:'Sales',name:'Peter',salary:40000},    
-    {usersLogo:'assets/images/b4.jpg',id:4,department:'Sales',name:'harry',salary:70000},
-    {usersLogo:'assets/images/s1.jpg',id:5,department:'IT',name:'Sheena',salary:80000},
-    {usersLogo:'assets/images/s2.jpg',id:6,department:'IT',name:'rohan',salary:47000},
-    {usersLogo:'assets/images/s3.jpg',id:7,department:'RnD',name:'sohan',salary:60000},
-    {usersLogo:'assets/images/s4.jpg',id:8,department:'RnD',name:'mohan',salary:50000}       
-  ];
-
-
-  toggle()
-{
-  //alert("btn clicked");
-  this.isBtnVisible=!this.isBtnVisible;
-}
-
-  
 
 }

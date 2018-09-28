@@ -1,3 +1,24 @@
 <p>
   c6imgdispthclick works!
 </p>
+<table class="table table-bordered table-condensed">
+  <tr>
+    <th>id</th>
+    <th><button (click)="toggle()">Show / Hide</button></th>
+    <th>dept</th>
+    <th>name</th>
+    <th>salary</th>
+    
+  </tr>
+  <tr *ngFor="let u of users" >
+      <th>{{u.id}}</th>
+
+      <th><img *ngIf="isBtnVisible" src='{{u.usersLogo}}'  [style.width.px]="usersLogoWidth" [style.height.px]="usersLogoHeight"/></th>
+      <th>{{u.department}}</th>
+      <th>{{u.name}}</th>
+      <th>{{u.salary}}</th>
+      
+
+  </tr>
+</table>
+<!-- {usersLogo:'assets/images/u1.jpg',id:1,department:'IT',name:'john',salary:20000},     -->

@@ -1,0 +1,72 @@
+<p>
+  c7inbuiltpipes works!
+</p>
+<h1 class="text-center">welcome {{userName | async}}</h1>
+<h1 class="text-center">welcome {{userName | titlecase}}</h1>
+<table  class="table table-bordered">
+  <tr>
+      <th>Empno</th>
+      <th>Ename</th>
+      <th>Job</th>
+      <th>MGR</th>
+      <th>HIREDATE</th>
+      <th>HIREDATE date</th>
+      <th>HIREDATE date dd MM yyyy</th>
+      <th>SAL</th>
+      <th>SAL currency</th>
+      <th>SAL currency INR</th>
+      <th>SAL currency INR code</th>
+      <th>SAL currency INR symbol</th>
+      <th>COMM</th>
+      <th>DEPTNOo</th>
+  </tr>
+  <tr *ngFor="let e of emp" > 
+      <td>{{e.EMPNO}}</td>
+      <td>{{e.ENAME| lowercase }}</td>
+      <td>{{e.JOB}}</td>
+      <td>{{e.MGR}}</td>
+      <td>{{e.HIREDATE }}</td>
+      <td>{{e.HIREDATE| date }}</td>
+      <td>{{e.HIREDATE| date :'dd/MM/yyyy' }}</td>
+      <td>{{e.SAL}}</td>
+      <td>{{e.SAL | currency}}</td>
+      <td>{{e.SAL | currency:'INR'}}</td>
+      <td>{{e.SAL | currency:'INR':'code'}}</td>
+      <td>{{e.SAL | currency:'INR':'symbol'}}</td>
+      <td>{{e.COMM}}</td>
+      <td>{{e.DEPTNO}}</td>
+  </tr>
+  
+  </table>
+  <br>...................................<br>
+  {{emp}}
+  <br>...................................<br>
+{{emp|json}}
+<br>...................................<br>
+<pre>{{emp|json}}</pre>
+<br>.........................................<br>
+Enter no of row <input type="text" [(ngModel)]="limitrow" /><br>
+<table  class="table table-bordered">
+    <tr>
+        <th>Empno</th>
+        <th>Ename slice 0 1</th>
+        <th>Job</th>
+        <th>MGR</th>
+        <th>HIREDATE</th>
+        <th>SAL</th>
+        <th>COMM</th>
+        <th>DEPTNOo</th>
+    </tr>
+    <tr *ngFor="let e of emp |  slice:0:limitrow "> 
+        <td>{{e.EMPNO}}</td>
+        <td>{{e.ENAME| lowercase |slice:0:1  }}</td>
+        <td>{{e.JOB}}</td>
+        <td>{{e.MGR}}</td>
+        <td>{{e.HIREDATE }}</td>
+        <td>{{e.SAL}}</td>
+        <td>{{e.COMM}}</td>
+        <td>{{e.DEPTNO}}</td>
+    </tr>
+    
+    </table>
+

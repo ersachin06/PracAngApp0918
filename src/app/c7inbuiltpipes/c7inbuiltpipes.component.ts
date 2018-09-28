@@ -1,26 +1,32 @@
+
 import { Component, OnInit } from '@angular/core';
-
+import {promise} from 'selenium-webdriver';
 @Component({
-  selector: 'app-c6imgdispthclick',
-  templateUrl: './c6imgdispthclick.component.html',
-  styleUrls: ['./c6imgdispthclick.component.css']
+  selector: 'app-c7inbuiltpipes',
+  templateUrl: './c7inbuiltpipes.component.html',
+  styleUrls: ['./c7inbuiltpipes.component.css']
 })
-export class C6imgdispthclickComponent implements OnInit {
+export class C7inbuiltpipesComponent implements OnInit {
 
-  constructor() { }
 
   ngOnInit() {
   }
+  userName:any=" icsd tech labs ";
 
-
-
+  constructor() { 
+    this.userName=new Promise(function(resolve,reject)
+    {
+      setTimeout(()=>{resolve("john Smith");},5000);
+    }
+    );
+  }  
   emp:any[]=[
     {
       EMPNO:7369,
       ENAME:"SMITH",
       JOB:"CLERK",
       MGR:7902,
-      HIREDATE:new Date('17/12/1980'),
+      HIREDATE:new Date('12/17/1980'),//mm//dd///yyyy
       SAL:800,
       COMM:null,
       DEPTNO:20
@@ -30,7 +36,7 @@ export class C6imgdispthclickComponent implements OnInit {
       ENAME:"ALLEN",
       JOB:"SALESMAN",
       MGR:7698,
-      HIREDATE:new Date('20/02/1981'),
+      HIREDATE:new Date('02/20/1981'),
       SAL:1600,
       COMM:300,
       DEPTNO:30
@@ -40,7 +46,7 @@ export class C6imgdispthclickComponent implements OnInit {
       ENAME:"WARD",
       JOB:"SALESMAN",
       MGR:7698,
-      HIREDATE:new Date('22/02/1981'),
+      HIREDATE:new Date('02/22/1981'),
       SAL:1250,
       COMM:500,
       DEPTNO:30
@@ -50,7 +56,7 @@ export class C6imgdispthclickComponent implements OnInit {
       ENAME:"JONES",
       JOB:"MANAGER",
       MGR:7839,
-      HIREDATE:new Date('02/04/1981'),
+      HIREDATE:new Date('04/02/1981'),
       SAL:2975,
       COMM:null,
       DEPTNO:20
@@ -60,7 +66,7 @@ export class C6imgdispthclickComponent implements OnInit {
       ENAME:"MARTIN",
       JOB:"SALESMAN",
       MGR:7698,
-      HIREDATE:new Date('28/09/1981'),
+      HIREDATE:new Date('09/28/1981'),
       SAL:1250,
       COMM:500,
       DEPTNO:30
@@ -70,7 +76,7 @@ export class C6imgdispthclickComponent implements OnInit {
       ENAME:"BLAKE",
       JOB:"MANAGER",
       MGR:7839,
-      HIREDATE:new Date('01/05/1981'),
+      HIREDATE:new Date('05/01/1981'),
       SAL:2650,
       COMM:null,
       DEPTNO:30
@@ -80,7 +86,7 @@ export class C6imgdispthclickComponent implements OnInit {
       ENAME:"CLARK",
       JOB:"MANAGER",
       MGR:7839,
-      HIREDATE:new Date('09/06/1981'),
+      HIREDATE:new Date('06/09/1981'),
       SAL:2450,
       COMM:null,
       DEPTNO:10
@@ -90,7 +96,7 @@ export class C6imgdispthclickComponent implements OnInit {
       ENAME:"SCOTT",
       JOB:"ANALYST",
       MGR:7566,
-      HIREDATE:new Date('19/04/1987'),
+      HIREDATE:new Date('04/19/1987'),
       SAL:3000,
       COMM:null,
       DEPTNO:20
@@ -100,7 +106,7 @@ export class C6imgdispthclickComponent implements OnInit {
       ENAME:"KING",
       JOB:"PRESIDENT",
       MGR:null,
-      HIREDATE:new Date('17/11/1981'),
+      HIREDATE:new Date('11/17/1981'),
       SAL:5000,
       COMM:null,
       DEPTNO:10
@@ -110,7 +116,7 @@ export class C6imgdispthclickComponent implements OnInit {
       ENAME:"TURNER",
       JOB:"SALESMAN",
       MGR:7698,
-      HIREDATE:new Date('08/09/1981'),
+      HIREDATE:new Date('09/08/1981'),
       SAL:1500,
       COMM:0,
       DEPTNO:30
@@ -120,7 +126,7 @@ export class C6imgdispthclickComponent implements OnInit {
       ENAME:"ADAMS",
       JOB:"CLERK",
       MGR:7788,
-      HIREDATE:new Date('23/05/1987'),
+      HIREDATE:new Date('05/23/1987'),
       SAL:1100,
       COMM:null,
       DEPTNO:20
@@ -130,7 +136,7 @@ export class C6imgdispthclickComponent implements OnInit {
       ENAME:"JAMES",
       JOB:"CLERK",
       MGR:7698,
-      HIREDATE:new Date('03/12/1981'),
+      HIREDATE:new Date('12/03/1981'),
       SAL:950,
       COMM:null,
       DEPTNO:30
@@ -140,7 +146,7 @@ export class C6imgdispthclickComponent implements OnInit {
       ENAME:"FORD",
       JOB:"ANALYST",
       MGR:7566,
-      HIREDATE:new Date('03/12/1981'),
+      HIREDATE:new Date('12/03/1981'),
       SAL:3000,
       COMM:null,
       DEPTNO:20
@@ -150,35 +156,17 @@ export class C6imgdispthclickComponent implements OnInit {
       ENAME:"MILLER",
       JOB:"CLERK",
       MGR:7782,
-      HIREDATE:new Date('23/01/1982'),
+      HIREDATE:new Date('01/23/1982'),
       SAL:1300,
       COMM:null,
       DEPTNO:10
     }
   ];
-  usersLogoHeight:number=100;
-  usersLogoWidth:number=100;
-  isBtnVisible:boolean=true;
-
-  users:any[]=[
-  
-    {usersLogo:'assets/images/a1.jpg',id:1,department:'IT',name:'john',salary:20000},    
-    {usersLogo:'assets/images/l2.jpg',id:2,department:'IT',name:'Alisha',salary:10000},
-    {usersLogo:'assets/images/b3.jpg',id:3,department:'Sales',name:'Peter',salary:40000},    
-    {usersLogo:'assets/images/b4.jpg',id:4,department:'Sales',name:'harry',salary:70000},
-    {usersLogo:'assets/images/s1.jpg',id:5,department:'IT',name:'Sheena',salary:80000},
-    {usersLogo:'assets/images/s2.jpg',id:6,department:'IT',name:'rohan',salary:47000},
-    {usersLogo:'assets/images/s3.jpg',id:7,department:'RnD',name:'sohan',salary:60000},
-    {usersLogo:'assets/images/s4.jpg',id:8,department:'RnD',name:'mohan',salary:50000}       
-  ];
 
 
-  toggle()
-{
-  //alert("btn clicked");
-  this.isBtnVisible=!this.isBtnVisible;
-}
 
-  
+  //limitrow:number=3;
+  limitrow:number=this.emp.length;
 
 }
+
