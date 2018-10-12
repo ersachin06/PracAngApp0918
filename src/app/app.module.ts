@@ -17,6 +17,9 @@ import { C7inbuiltpipesComponent } from './c7inbuiltpipes/c7inbuiltpipes.compone
 import { CustomPipe,CustomJSONPipe,FilterPipe } from './pipes/custom.pipe';
 import { C8custompipesComponent } from './c8custompipes/c8custompipes.component';
 import { CustomeJsonPipePipe } from './pipes/custome-json-pipe.pipe';
+import { C1pracComponent } from './prac/c1prac/c1prac.component';
+import { V1Component } from './v1/v1.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +38,9 @@ import { CustomeJsonPipePipe } from './pipes/custome-json-pipe.pipe';
     C8custompipesComponent,
     CustomeJsonPipePipe,
     CustomJSONPipe,
-    FilterPipe
+    FilterPipe,
+    C1pracComponent,
+    V1Component
   ],
   imports: [
     BrowserModule,

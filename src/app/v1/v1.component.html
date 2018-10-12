@@ -1,0 +1,52 @@
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+
+
+
+<p>
+  v1 works!
+</p>
+<h2>welcome {{username}}</h2><br>
+<img src='../assets/images/b1.jpg'/><br>
+<img src={{imgurl}}/><br>
+<button disabled="{{blstatus}}" > login </button>
+<button [disabled]="blstatus">login</button>
+<button (click)="changeName()">change name</button>
+<input type="text" [(ngModel)]="strName"/>
+welcome {{strName}}
+
+<ul>
+<li *ngFor="let u of users" >{{u}}</li>
+
+</ul>
+
+<br>
+<table class="table table-bordered">
+    <tr>
+      <th>empno</th>
+      <th>ename</th>
+      <th>eage</th>
+      <th>eadd</th>
+      <th>eimages</th>
+    </tr>
+    <tr *ngFor="let e of emp" >
+        <td>{{e.empno}}</td>
+        <td>{{e.ename}}</td>
+        <td>{{e.eage}}</td>
+        <td>{{e.eadd}}</td>
+        <td><img [src]="e.imgurl"/></td>
+      </tr>
+      
+
+</table>
+
+
