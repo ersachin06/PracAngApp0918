@@ -1,0 +1,13 @@
+<p>
+  s1 works!
+</p>
+Welcome <h3>{{username}}</h3>
+<br>
+<img src="assets/images/b3.jpg"/><br>
+<img src={{imgurl}}/><br>
+<img [src]="imgurl"/><br>
+<button disabled="{{btnStatus}}">login</button>
+<button [disabled]="btnStatus">login</button> <!--property binding -->
+<button  (click)="changeName()">change name</button><!--event binding -->
+<input type="text" [(ngModel)]="strNm"/><!--2 way binding -->
+<p>you entered is {{strNm}}</p>
