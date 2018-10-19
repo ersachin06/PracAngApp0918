@@ -19,6 +19,7 @@ import { C8custompipesComponent } from './c8custompipes/c8custompipes.component'
 import { CustomeJsonPipePipe } from './pipes/custome-json-pipe.pipe';
 import { C1pracComponent } from './prac/c1prac/c1prac.component';
 import { V1Component } from './v1/v1.component';
+import { Temp1Component } from './temp1/temp1.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { V1Component } from './v1/v1.component';
     CustomJSONPipe,
     FilterPipe,
     C1pracComponent,
-    V1Component
+    V1Component,
+    Temp1Component
   ],
   imports: [
     BrowserModule,
