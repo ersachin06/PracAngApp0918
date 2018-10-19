@@ -20,7 +20,6 @@ import { CustomeJsonPipePipe } from './pipes/custome-json-pipe.pipe';
 import { C1pracComponent } from './prac/c1prac/c1prac.component';
 import { V1Component } from './v1/v1.component';
 import { S1Component } from './s1/s1.component';
-import { S2sumitdirComponent } from './s2sumitdir/s2sumitdir.component';
 
 @NgModule({
   declarations: [
@@ -43,8 +42,7 @@ import { S2sumitdirComponent } from './s2sumitdir/s2sumitdir.component';
     FilterPipe,
     C1pracComponent,
     V1Component,
-    S1Component,
-    S2sumitdirComponent
+    S1Component
   ],
   imports: [
     BrowserModule,
