@@ -22,6 +22,9 @@ import { V1Component } from './v1/v1.component';
 import { S1Component } from './s1/s1.component';
 import {Temp1Component} from './temp1/temp1.component';
 import {S2sumitdirComponent} from './s2sumitdir/s2sumitdir.component';
+import { V3directiveComponent } from './v3directive/v3directive.component';
+import { C9prodComponent } from './c9prod/c9prod.component';
+import { C10ratingComponent } from './c10rating/c10rating.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +49,10 @@ import {S2sumitdirComponent} from './s2sumitdir/s2sumitdir.component';
     V1Component,
     S1Component,
     Temp1Component,
-    S2sumitdirComponent
+    S2sumitdirComponent,
+    V3directiveComponent,
+    C9prodComponent,
+    C10ratingComponent
   ],
   imports: [
     BrowserModule,

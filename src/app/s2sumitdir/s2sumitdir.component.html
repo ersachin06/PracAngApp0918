@@ -36,5 +36,128 @@
     <td>{{c.desc}}</td>
   </tr>
 </table>
+<p>............................................................</p>
+<table class="table table-borderless ">
+  <tr class="bg-danger">
+    <th>pid</th>
+    <th>catid</th>
+    <th>prod name</th>
+    <th>prod image</th>
+    <th>prod desc</th>
+    <th>price</th>
+    <th>qty</th>
+    <th>rating</th>
+  </tr>
+<tr *ngFor="let p of products">
+    <td>{{p.pid}}</td>
+    <td>{{p.catid}}</td>
+    <td>{{p.name}}</td>
+    <td>{{p.img}}</td>
+    <td>{{p.desc}}</td>
+    <td>{{p.price}}</td>
+    <td>{{p.qty}}</td>
+    <td>{{p.rating}}</td>
+</tr>
 
+</table>
+
+
+<p>.......................price > 30000.....................................</p>
+
+<div *ngIf="products2.length>=1">
+    <table class="table table-borderless ">
+        <tr class="bg-danger">
+          <th>pid</th>
+          <th>catid</th>
+          <th>prod name</th>
+          <th>prod image</th>
+          <th>prod desc</th>
+          <th>price</th>
+          <th>qty</th>
+          <th>rating</th>
+        </tr>
+    <tr *ngFor="let p of products2" >
+        <td>{{p.pid}}</td>
+        <td>{{p.catid}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.img}}</td>
+        <td>{{p.desc}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.qty}}</td>
+        <td>{{p.rating}}</td>
+    </tr>
+
+    </table>
+
+</div>
+<div *ngIf="products2.length==0">
+  <p class="bg-danger">no records found</p>
+</div>
+
+<p>.......................price > 30000.....................................</p>
+
+<div *ngIf="products.length>=1 else falsecondn">
+    <table class="table table-borderless ">
+        <tr class="bg-danger">
+          <th>pid</th>
+          <th>catid</th>
+          <th>prod name</th>
+          <th>prod image</th>
+          <th>prod desc</th>
+          <th>price</th>
+          <th>qty</th>
+          <th>rating</th>
+        </tr>
+        <ng-container *ngFor="let p of products">
+
+        <tr *ngIf="p.price>30000">
+        <td>{{p.pid}}</td>
+        <td>{{p.catid}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.img}}</td>
+        <td>{{p.desc}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.qty}}</td>
+        <td>{{p.rating}}</td>
+    </tr>
+  </ng-container>
+    </table>
+
+</div>
+<ng-template #falsecondn>
+  <p class="bg-danger">no records found</p>
+</ng-template>
+<p>.......................price > 30000 and or .....................................</p>
+
+<div *ngIf="products.length>=1 else falsecondn1">
+    <table class="table table-borderless ">
+        <tr class="bg-danger">
+          <th>pid</th>
+          <th>catid</th>
+          <th>prod name</th>
+          <th>prod image</th>
+          <th>prod desc</th>
+          <th>price</th>
+          <th>qty</th>
+          <th>rating</th>
+        </tr>
+        <ng-container *ngFor="let p of products">
+
+        <tr *ngIf="p.price>30000 && p.pid==5 && p.catid==3 || p.pid>=6">
+        <td>{{p.pid}}</td>
+        <td>{{p.catid}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.img}}</td>
+        <td>{{p.desc}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.qty}}</td>
+        <td>{{p.rating}}</td>
+    </tr>
+  </ng-container>
+    </table>
+
+</div>
+<ng-template #falsecondn1>
+  <p class="bg-danger">no records found</p>
+</ng-template>
 
