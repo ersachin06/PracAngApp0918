@@ -1,0 +1,16 @@
+<!-- <p>
+  temprating works!
+</p>
+{{prodrating}}icsd -->
+
+<div *ngIf="prodrating>=4" class="bg-success">
+  excellent
+</div>
+<div *ngIf="prodrating>=3 && prodrating<4" class="bg-primary">
+    average
+</div>
+<div *ngIf="prodrating<=2" class="bg-danger">
+     poor
+</div>
+
+{{category|json}}

@@ -25,6 +25,11 @@ import {S2sumitdirComponent} from './s2sumitdir/s2sumitdir.component';
 import { V3directiveComponent } from './v3directive/v3directive.component';
 import { C9prodComponent } from './c9prod/c9prod.component';
 import { C10ratingComponent } from './c10rating/c10rating.component';
+import { TempprodComponent } from './tempprod/tempprod.component';
+import { TempratingComponent } from './temprating/temprating.component';
+import { C11prodPassingObjToChildComponent } from './c11prod-passing-obj-to-child/c11prod-passing-obj-to-child.component';
+import { C12Component } from './c12/c12.component';
+import { C12interfaceComponent } from './c12interface/c12interface.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +57,12 @@ import { C10ratingComponent } from './c10rating/c10rating.component';
     S2sumitdirComponent,
     V3directiveComponent,
     C9prodComponent,
-    C10ratingComponent
+    C10ratingComponent,
+    TempprodComponent,
+    TempratingComponent,
+    C11prodPassingObjToChildComponent,
+    C12Component,
+    C12interfaceComponent
   ],
   imports: [
     BrowserModule,

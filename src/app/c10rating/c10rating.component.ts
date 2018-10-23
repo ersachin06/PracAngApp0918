@@ -11,6 +11,8 @@ export class C10ratingComponent implements OnInit {
   prodRating:number;
   constructor() { }
 
+  @Input()
+  category:any;
   ngOnInit() {
   }
 

@@ -3,9 +3,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
-<p>
 
-  c9prod works!
+<p>
+  c11prod-passing-obj-to-child works!
 </p>
 
 <table class="table table-bordered table-hover">
@@ -21,6 +21,7 @@
       <th>qty</th>
       <th>rating</th>
       <th>rating2</th>
+      <th>passing object</th>
     </tr>
     <ng-container *ngFor="let p of products">
 <tr >
@@ -35,6 +36,9 @@
   <td>
     <app-c10rating [prodRating]="p.rating"></app-c10rating>
   </td>
+  <td>
+      <app-c10rating [category]="cat"></app-c10rating>
+    </td>
 </tr>
 </ng-container>
   </table>
