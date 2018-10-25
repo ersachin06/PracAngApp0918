@@ -1,0 +1,32 @@
+<p>
+  c14prodeventobject works!
+</p>
+now current rating is {{currentRating}}<br>
+feedback is {{feedback}}
+<table class="table table-bordered">
+    <tr>
+        <th>pid</th>
+        <th>cid</th>
+        <th>name</th>
+        <th>img</th>
+        <th>desc</th>
+        <th>price</th>
+        <th>qty</th>
+        <th>rating</th>
+        <th>rating</th>
+      </tr>
+      <tr *ngFor="let p of products">
+          <td>{{p.pid}}</td>
+          <td>{{p.catid}}</td>
+          <td>{{p.name}}</td>
+          <td>{{p.img}}</td>
+          <td>{{p.desc}}</td>
+          <td>{{p.price}}</td>
+          <td>{{p.qty}}</td>
+          <td>{{p.rating}}</td>
+          <td>
+            <app-c15ratingsendingobject [prodRating]="p.rating" (prodRatingCount)="ratingStatus($event)" [title]="currentRating" ></app-c15ratingsendingobject>
+          </td>
+        </tr>
+
+</table>

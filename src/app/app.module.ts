@@ -1,5 +1,7 @@
+import { UsersComponent } from './users/users.component';
+import { HomeComponent } from './home/home.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { C1Component } from './c1/c1.component';
@@ -30,6 +32,16 @@ import { TempratingComponent } from './temprating/temprating.component';
 import { C11prodPassingObjToChildComponent } from './c11prod-passing-obj-to-child/c11prod-passing-obj-to-child.component';
 import { C12Component } from './c12/c12.component';
 import { C12interfaceComponent } from './c12interface/c12interface.component';
+import { C13prodinputoutputComponent } from './c13prodinputoutput/c13prodinputoutput.component';
+import { C12ratinginputoutputComponent } from './c12ratinginputoutput/c12ratinginputoutput.component';
+import { C14prodeventobjectComponent } from './c14prodeventobject/c14prodeventobject.component';
+import { C15ratingsendingobjectComponent } from './c15ratingsendingobject/c15ratingsendingobject.component';
+
+import { RouterModule } from '@angular/router';
+import { ProductComponent } from './product/product.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -62,11 +74,25 @@ import { C12interfaceComponent } from './c12interface/c12interface.component';
     TempratingComponent,
     C11prodPassingObjToChildComponent,
     C12Component,
-    C12interfaceComponent
+    C12interfaceComponent,
+    C13prodinputoutputComponent,
+    C12ratinginputoutputComponent,
+    C14prodeventobjectComponent,
+    C15ratingsendingobjectComponent,
+    HomeComponent,
+    ProductComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(
+      [
+        {path:'home',component:HomeComponent},
+        {path:'users',component:UsersComponent},
+        {path:'products',component:ProductComponent}
+      ]
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]

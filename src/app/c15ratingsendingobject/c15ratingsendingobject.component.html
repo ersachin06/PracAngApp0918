@@ -1,0 +1,19 @@
+<!-- <p>
+  c15ratingsendingobject works!
+</p> -->
+{{prodRating}}
+
+<!-- <div (click)="sendProdRating(prodRating)"> -->
+    <div (mouseenter)="sendProdRating(prodRating)">
+
+<div *ngIf="prodRating>=4 " class="bg-danger">
+  excellent
+</div>
+<div *ngIf="prodRating>=3 && prodRating<4" class="bg-secondary">
+
+  average
+</div>
+<div *ngIf="prodRating<3" class="bg-success">
+poor
+</div>
+</div>
