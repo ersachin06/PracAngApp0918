@@ -161,3 +161,44 @@
   <p class="bg-danger">no records found</p>
 </ng-template>
 
+<p>......................switch case.....................................</p>
+
+<div *ngIf="products.length>=1 else falsecondn1">
+    <table class="table table-borderless ">
+        <tr class="bg-danger">
+          <th>pid</th>
+          <th>catid</th>
+          <th>prod name</th>
+          <th>prod image</th>
+          <th>prod desc</th>
+          <th>price</th>
+          <th>qty</th>
+          <th>rating</th>
+        </tr>
+        <ng-container *ngFor="let p of products" [ngSwitch]="p.catid">
+
+        <tr *ngSwitchCase="'1'" class="bg-success">
+          <td>{{p.pid}}</td>
+          <td>{{p.catid}}</td>
+          <td>{{p.name}}</td>
+          <td>{{p.img}}</td>
+          <td>{{p.desc}}</td>
+          <td>{{p.price}}</td>
+          <td>{{p.qty}}</td>
+          <td>{{p.rating}}</td>
+        </tr>
+        <tr *ngSwitchCase="'3'" class="bg-danger">
+          <td>{{p.pid}}</td>
+          <td>{{p.catid}}</td>
+          <td>{{p.name}}</td>
+          <td>{{p.img}}</td>
+          <td>{{p.desc}}</td>
+          <td>{{p.price}}</td>
+          <td>{{p.qty}}</td>
+          <td>{{p.rating}}</td>
+        </tr>
+  </ng-container>
+    </table>
+
+</div>
+

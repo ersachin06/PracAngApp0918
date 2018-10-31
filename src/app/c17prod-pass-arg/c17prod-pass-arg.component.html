@@ -1,0 +1,28 @@
+<p>
+  c17prod-pass-arg works!
+</p>
+{{catid}}
+<table class="table table-border">
+  <tr class="bg-warning">
+      <th>prodid</th>
+      <th>catid</th>
+      <th>prodname</th>
+      <th>prodimg</th>
+      <th>prod desc</th>
+      <th>prod price</th>
+      <th>prod qty</th>
+  </tr>
+  <ng-container *ngFor="let p of products" >
+  <tr class="bg-success" *ngIf="p.catid==catid">
+
+      <th>{{p.pid}}</th>
+      <th>{{p.catid}}</th>
+      <th>{{p.name}}</th>
+      <td><img  src='assets/images/{{p.img}}'/></td>
+      <th>{{p.desc}}</th>
+      <th>{{p.price}}</th>
+      <th>{{p.qty}}</th>
+  </tr>
+</ng-container>
+
+</table>

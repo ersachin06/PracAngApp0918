@@ -39,6 +39,8 @@ import { C15ratingsendingobjectComponent } from './c15ratingsendingobject/c15rat
 
 import { RouterModule } from '@angular/router';
 import { ProductComponent } from './product/product.component';
+import { C16catComponent } from './c16cat/c16cat.component';
+import { C17prodPassArgComponent } from './c17prod-pass-arg/c17prod-pass-arg.component';
 
 
 
@@ -81,16 +83,21 @@ import { ProductComponent } from './product/product.component';
     C15ratingsendingobjectComponent,
     HomeComponent,
     ProductComponent,
-    UsersComponent
+    UsersComponent,
+    C16catComponent,
+    C17prodPassArgComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(
       [
+        {path:'',redirectTo:'home',pathMatch:'full'},
         {path:'home',component:HomeComponent},
         {path:'users',component:UsersComponent},
-        {path:'products',component:ProductComponent}
+        {path:'products',component:ProductComponent},
+        {path:'categories',component:C16catComponent},
+        {path:'prodInfo/:id',component:C17prodPassArgComponent}
       ]
     )
   ],
