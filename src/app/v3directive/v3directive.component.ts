@@ -18,6 +18,7 @@ export class V3directiveComponent implements OnInit {
 
   ];
 
+  x:number=1;
   categories1:any[]=[
 
 

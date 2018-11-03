@@ -143,3 +143,80 @@
 </tr>
 </ng-container>
   </table>
+<br>..............................................................................................................
+<br>
+<input type="text" [(ngModel)]="x"/>
+u entered {{x}}<br>
+<table class="table table-bordered">
+
+    <tr class="bg-danger">
+
+      <th>prodid</th>
+      <th>catid</th>
+      <th>name</th>
+      <th>desc</th>
+      <th>img</th>
+      <th>price</th>
+      <th>qty</th>
+    </tr>
+<ng-container *ngFor="let p of products" [ngSwitch]="x">
+
+    <tr class="bg-success" *ngSwitchCase='2' >
+        <td>{{p.pid}}</td>
+        <td>{{p.catid}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.desc}}</td>
+        <td>{{p.img}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.qty}}</td>
+      </tr>
+      <tr class="bg-warning" *ngSwitchCase='5' >
+          <td>{{p.pid}}</td>
+          <td>{{p.catid}}</td>
+          <td>{{p.name}}</td>
+          <td>{{p.name}}</td>
+          <td>{{p.name}}</td>
+          <td>{{p.name}}</td>
+          <td>{{p.name}}</td>
+        </tr>
+</ng-container>
+
+</table>
+
+<br>---------------------------------------------------<br>
+<table class="table table-bordered">
+
+    <tr class="bg-danger">
+
+      <th>prodid</th>
+      <th>catid</th>
+      <th>name</th>
+      <th>desc</th>
+      <th>img</th>
+      <th>price</th>
+      <th>qty</th>
+    </tr>
+<ng-container *ngFor="let p of products" [ngSwitch]="p.catid">
+
+    <tr class="bg-success" *ngSwitchCase='1' >
+        <td>{{p.pid}}</td>
+        <td>{{p.catid}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.desc}}</td>
+        <td>{{p.img}}</td>
+        <td>{{p.price}}</td>
+        <td>{{p.qty}}</td>
+      </tr>
+      <tr class="bg-warning" *ngSwitchCase='3' >
+          <td>{{p.pid}}</td>
+          <td>{{p.catid}}</td>
+          <td>{{p.name}}</td>
+          <td>{{p.name}}</td>
+          <td>{{p.name}}</td>
+          <td>{{p.name}}</td>
+          <td>{{p.name}}</td>
+        </tr>
+</ng-container>
+
+</table>
+

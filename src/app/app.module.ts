@@ -1,3 +1,4 @@
+import { C22dashboardComponent } from './c22dashboard/c22dashboard.component';
 import { UsersComponent } from './users/users.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -45,6 +46,8 @@ import { C18adminComponent } from './c18admin/c18admin.component';
 import { C19airlinesComponent } from './c18admin/c19airlines/c19airlines.component';
 import { C20flightsComponent } from './c18admin/c20flights/c20flights.component';
 import { C21viewuserComponent } from './c18admin/c21viewuser/c21viewuser.component';
+import { C23infoComponent } from './c22dashboard/c23info/c23info.component';
+import { C24panelComponent } from './c22dashboard/c24panel/c24panel.component';
 
 
 
@@ -93,7 +96,10 @@ import { C21viewuserComponent } from './c18admin/c21viewuser/c21viewuser.compone
     C18adminComponent,
     C19airlinesComponent,
     C20flightsComponent,
-    C21viewuserComponent
+    C21viewuserComponent,
+    C22dashboardComponent,
+    C23infoComponent,
+    C24panelComponent
 
   ],
   imports: [
@@ -116,6 +122,14 @@ import { C21viewuserComponent } from './c18admin/c21viewuser/c21viewuser.compone
             {path:'flights',component:C20flightsComponent},
             {path:'viewuser',component:C21viewuserComponent}
           ]
+        },
+        {
+
+            path:'dashboard',component:C22dashboardComponent,children:
+            [
+              {path:'info/:id',component:C23infoComponent,outlet:'rinfo'},
+              {path:'panel',component:C24panelComponent,outlet:'rpanel'}
+            ]
         },
         {path:'**',redirectTo:'home'}
       ]

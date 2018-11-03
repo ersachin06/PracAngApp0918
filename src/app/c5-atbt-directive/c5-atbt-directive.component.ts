@@ -10,7 +10,7 @@ export class C5AtbtDirectiveComponent implements OnInit {
   userTitle:string="atbt directive ";
   colorName:string="orange";
   constructor() { }
-
+  colorName11:string="indigo";
   ngOnInit() {
   }
  //function keyword not use here

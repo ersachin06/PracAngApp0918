@@ -5,6 +5,7 @@
 
 
 
+<!-- <app-c5-atbt-directive></app-c5-atbt-directive> -->
 <!-- The content below is only a placeholder and can be replaced. -->
 <!-- <div style="text-align:center">
   <h1>
@@ -110,7 +111,13 @@
             <li><a class="nav-link" [routerLink]="['/home']">Home</a></li>
             <li><a class="nav-link" [routerLink]="['/users']" href="">User</a></li>
             <li><a class="nav-link" [routerLink]="['/products']">Products</a></li>
-            <li><a class="nav-link" [routerLink]="['/dashboard']">Dashboard</a></li>
+            <li><a class="nav-link" [routerLink]="['/dashboard',{
+              outlets:
+              {
+                rpanel:['panel'],
+                rinfo:['info','id']
+              }
+            }]">Dashboard</a></li>
             <li><a class="nav-link" [routerLink]="['/categories']">Categories</a></li>
             <li><a class="nav-link" [routerLink]="['/admin']">Admin</a></li>
           </ul>
