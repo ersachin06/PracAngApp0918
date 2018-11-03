@@ -26,3 +26,7 @@
 </ng-container>
 
 </table>
+
+<button [routerLink]="['/categories']" class="btn btn-success" >Go Back from html</button>
+<button (click)="go()"  class="btn btn-primary" >Go Back from class</button>
+<button (click)="goBackLoc()"  class="btn btn-warning" >Go Back from class using location object.</button>

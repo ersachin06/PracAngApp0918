@@ -41,6 +41,10 @@ import { RouterModule } from '@angular/router';
 import { ProductComponent } from './product/product.component';
 import { C16catComponent } from './c16cat/c16cat.component';
 import { C17prodPassArgComponent } from './c17prod-pass-arg/c17prod-pass-arg.component';
+import { C18adminComponent } from './c18admin/c18admin.component';
+import { C19airlinesComponent } from './c18admin/c19airlines/c19airlines.component';
+import { C20flightsComponent } from './c18admin/c20flights/c20flights.component';
+import { C21viewuserComponent } from './c18admin/c21viewuser/c21viewuser.component';
 
 
 
@@ -85,19 +89,35 @@ import { C17prodPassArgComponent } from './c17prod-pass-arg/c17prod-pass-arg.com
     ProductComponent,
     UsersComponent,
     C16catComponent,
-    C17prodPassArgComponent
+    C17prodPassArgComponent,
+    C18adminComponent,
+    C19airlinesComponent,
+    C20flightsComponent,
+    C21viewuserComponent
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(
       [
-        {path:'',redirectTo:'home',pathMatch:'full'},
+         {path:'',redirectTo:'home',pathMatch:'full'},
         {path:'home',component:HomeComponent},
         {path:'users',component:UsersComponent},
         {path:'products',component:ProductComponent},
         {path:'categories',component:C16catComponent},
-        {path:'prodInfo/:id',component:C17prodPassArgComponent}
+        // {path:'prodInfo/:id',component:C17prodPassArgComponent},
+        {path:'prodInfo',component:C17prodPassArgComponent},
+
+        {
+          path:'admin',component:C18adminComponent,children:
+          [
+            {path:'airlines',component:C19airlinesComponent},
+            {path:'flights',component:C20flightsComponent},
+            {path:'viewuser',component:C21viewuserComponent}
+          ]
+        },
+        {path:'**',redirectTo:'home'}
       ]
     )
   ],

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-c17prod-pass-arg',
@@ -17,14 +18,21 @@ export class C17prodPassArgComponent implements OnInit {
     {pid:7,catid:4,name:'wrangler',img:'c1.jpg',desc:'description',price:75000,qty:450,rating:4},
     {pid:8,catid:4,name:'spykar',img:'c2.jpg',desc:'description',price:85000,qty:500,rating:3}
   ];
-  constructor(private activateRoute:ActivatedRoute)
+  constructor(private activateRoute:ActivatedRoute,private router:Router,private location:Location)
   {
-    this.catid=this.activateRoute.snapshot.params['id'];
-
+    //this.catid=this.activateRoute.snapshot.params['id'];
+    this.catid=this.activateRoute.snapshot.queryParams['id'] || 'NO ID';
   }
 
   catid:number;
   ngOnInit() {
   }
-
+  go()
+  {
+    this.router.navigate(["/categories"]);
+  }
+  goBackLoc()
+  {
+    this.location.back();
+  }
 }
