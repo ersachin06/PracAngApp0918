@@ -12,14 +12,14 @@ export class C7inbuiltpipesComponent implements OnInit {
   ngOnInit() {
   }
   userName:any=" icsd tech labs ";
-
-  constructor() { 
+  unm:any="icsd tech labsssss";
+  constructor() {
     this.userName=new Promise(function(resolve,reject)
     {
       setTimeout(()=>{resolve("john Smith");},5000);
     }
     );
-  }  
+  }
   emp:any[]=[
     {
       EMPNO:7369,

@@ -1,8 +1,8 @@
 <p>
   c7inbuiltpipes works!
 </p>
-<h1 class="text-center">welcome {{userName | async}}</h1>
-<h1 class="text-center">welcome {{userName | titlecase}}</h1>
+<h1 class="text-center">welcome {{userName | async }}</h1>
+<h1 class="text-center">welcome v {{unm | titlecase}}</h1>
 <table  class="table table-bordered">
   <tr>
       <th>Empno</th>
@@ -20,7 +20,7 @@
       <th>COMM</th>
       <th>DEPTNOo</th>
   </tr>
-  <tr *ngFor="let e of emp" > 
+  <tr *ngFor="let e of emp" >
       <td>{{e.EMPNO}}</td>
       <td>{{e.ENAME| lowercase }}</td>
       <td>{{e.JOB}}</td>
@@ -36,7 +36,8 @@
       <td>{{e.COMM}}</td>
       <td>{{e.DEPTNO}}</td>
   </tr>
-  
+
+
   </table>
   <br>...................................<br>
   {{emp}}
@@ -57,7 +58,7 @@ Enter no of row <input type="text" [(ngModel)]="limitrow" /><br>
         <th>COMM</th>
         <th>DEPTNOo</th>
     </tr>
-    <tr *ngFor="let e of emp |  slice:0:limitrow "> 
+    <tr *ngFor="let e of emp |  slice:0:limitrow ">
         <td>{{e.EMPNO}}</td>
         <td>{{e.ENAME| lowercase |slice:0:1  }}</td>
         <td>{{e.JOB}}</td>
@@ -67,6 +68,6 @@ Enter no of row <input type="text" [(ngModel)]="limitrow" /><br>
         <td>{{e.COMM}}</td>
         <td>{{e.DEPTNO}}</td>
     </tr>
-    
+
     </table>
 

@@ -48,10 +48,39 @@ import { C20flightsComponent } from './c18admin/c20flights/c20flights.component'
 import { C21viewuserComponent } from './c18admin/c21viewuser/c21viewuser.component';
 import { C23infoComponent } from './c22dashboard/c23info/c23info.component';
 import { C24panelComponent } from './c22dashboard/c24panel/c24panel.component';
+import { V4imgvishideComponent } from './v4imgvishide/v4imgvishide.component';
 
 
+import {Routes} from '@angular/router';
+const routes:Routes=
+  [
+    {path:'',redirectTo:'home',pathMatch:'full'},
+   {path:'home',component:HomeComponent},
+   {path:'users',component:UsersComponent},
+   {path:'products',component:ProductComponent},
+   {path:'categories',component:C16catComponent},
+   // {path:'prodInfo/:id',component:C17prodPassArgComponent},
+   {path:'prodInfo',component:C17prodPassArgComponent},
 
+   {
+     path:'admin',component:C18adminComponent,children:
+     [
+       {path:'airlines',component:C19airlinesComponent},
+       {path:'flights',component:C20flightsComponent},
+       {path:'viewuser',component:C21viewuserComponent}
+     ]
+   },
+   {
 
+       path:'dashboard',component:C22dashboardComponent,children:
+       [
+         {path:'info/:id',component:C23infoComponent,outlet:'rinfo'},
+         {path:'panel',component:C24panelComponent,outlet:'rpanel'}
+       ]
+   },
+   {path:'**',redirectTo:'home'}
+
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -99,41 +128,14 @@ import { C24panelComponent } from './c22dashboard/c24panel/c24panel.component';
     C21viewuserComponent,
     C22dashboardComponent,
     C23infoComponent,
-    C24panelComponent
+    C24panelComponent,
+    V4imgvishideComponent
 
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(
-      [
-         {path:'',redirectTo:'home',pathMatch:'full'},
-        {path:'home',component:HomeComponent},
-        {path:'users',component:UsersComponent},
-        {path:'products',component:ProductComponent},
-        {path:'categories',component:C16catComponent},
-        // {path:'prodInfo/:id',component:C17prodPassArgComponent},
-        {path:'prodInfo',component:C17prodPassArgComponent},
-
-        {
-          path:'admin',component:C18adminComponent,children:
-          [
-            {path:'airlines',component:C19airlinesComponent},
-            {path:'flights',component:C20flightsComponent},
-            {path:'viewuser',component:C21viewuserComponent}
-          ]
-        },
-        {
-
-            path:'dashboard',component:C22dashboardComponent,children:
-            [
-              {path:'info/:id',component:C23infoComponent,outlet:'rinfo'},
-              {path:'panel',component:C24panelComponent,outlet:'rpanel'}
-            ]
-        },
-        {path:'**',redirectTo:'home'}
-      ]
-    )
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

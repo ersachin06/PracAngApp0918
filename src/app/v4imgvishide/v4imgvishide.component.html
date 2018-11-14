@@ -1,0 +1,22 @@
+<p>
+  v4imgvishide works!
+</p>
+
+<table class="table table-bordered">
+    <tr>
+        <th>
+          <button (click)="toggle()"  >show/hode</button>userslogo</th>
+        <th>uid</th>
+        <th>dept</th>
+        <th>salary</th>
+      </tr>
+      <!-- {usersLogo:'assets/images/b1.jpg',id:1,department:'csc',salary:78000}, -->
+  <tr *ngFor="let u of users">
+    <th >  <img *ngIf="isVisible" src='{{u.usersLogo}}'/></th>
+    <th>{{u.id}}</th>
+    <th>{{u.department}}</th>
+    <th>{{u.salary}}</th>
+  </tr>
+
+</table>
+
