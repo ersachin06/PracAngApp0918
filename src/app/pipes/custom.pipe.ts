@@ -8,7 +8,8 @@ export class CustomPipe implements PipeTransform {
   // transform(value: any,arg?:number): any {
   //   return value.substr(0,arg).toUpperCase();
   // }
-  transform(value: any): any {
+  transform(value: any): any
+  {
     return value.toUpperCase();
   }
 }
@@ -41,7 +42,7 @@ export class FilterPipe implements PipeTransform {
           return items;
       }
       console.log("icsd tech labs 1 "+JSON.stringify(items.filter(singleItem => singleItem[field].toLowerCase().includes(value.toLowerCase()))));
-      
+
       return items.filter(singleItem => singleItem[field].toLowerCase().includes(value.toLowerCase()));
   }
 }

@@ -51,68 +51,33 @@ import { C24panelComponent } from './c22dashboard/c24panel/c24panel.component';
 import { V4imgvishideComponent } from './v4imgvishide/v4imgvishide.component';
 
 
-import {routes} from './Routes';
-import { Temp99Component } from './temp99/temp99.component';
+import {Routes} from '@angular/router';
+export const routes:Routes=
+  [
+    {path:'',redirectTo:'home',pathMatch:'full'},
+   {path:'home',component:HomeComponent},
+   {path:'users',component:UsersComponent},
+   {path:'products',component:ProductComponent},
+   {path:'categories',component:C16catComponent},
+   // {path:'prodInfo/:id',component:C17prodPassArgComponent},
+   {path:'prodInfo',component:C17prodPassArgComponent},
 
+   {
+     path:'admin',component:C18adminComponent,children:
+     [
+       {path:'airlines',component:C19airlinesComponent},
+       {path:'flights',component:C20flightsComponent},
+       {path:'viewuser',component:C21viewuserComponent}
+     ]
+   },
+   {
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    C1Component,
-    C2PracTillbindingComponent,
-    C3DirectiveComponent,
-    UserstempComponent,
-    Userstemp11Component,
-    Userstemp12Component,
-    Temp11Component,
-    C4directiveReComponent,
-    C5AtbtDirectiveComponent,
-    C6imgdispthclickComponent,
-    C7inbuiltpipesComponent,
-    CustomPipe,
-    C8custompipesComponent,
-    CustomeJsonPipePipe,
-    CustomJSONPipe,
-    FilterPipe,
-    C1pracComponent,
-    V1Component,
-    S1Component,
-    Temp1Component,
-    S2sumitdirComponent,
-    V3directiveComponent,
-    C9prodComponent,
-    C10ratingComponent,
-    TempprodComponent,
-    TempratingComponent,
-    C11prodPassingObjToChildComponent,
-    C12Component,
-    C12interfaceComponent,
-    C13prodinputoutputComponent,
-    C12ratinginputoutputComponent,
-    C14prodeventobjectComponent,
-    C15ratingsendingobjectComponent,
-    HomeComponent,
-    ProductComponent,
-    UsersComponent,
-    C16catComponent,
-    C17prodPassArgComponent,
-    C18adminComponent,
-    C19airlinesComponent,
-    C20flightsComponent,
-    C21viewuserComponent,
-    C22dashboardComponent,
-    C23infoComponent,
-    C24panelComponent,
-    V4imgvishideComponent,
-    Temp99Component
+       path:'dashboard',component:C22dashboardComponent,children:
+       [
+         {path:'info/:id',component:C23infoComponent,outlet:'rinfo'},
+         {path:'panel',component:C24panelComponent,outlet:'rpanel'}
+       ]
+   },
+   {path:'**',redirectTo:'home'}
 
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    RouterModule.forRoot(routes)
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
+];

@@ -11,7 +11,7 @@
   <tr *ngFor="let c of categories">
     <td>{{c.id}}</td>
     <!-- <td><a [routerLink]="['../prodInfo',c.id]">{{c.name}}</a></td> -->
-    <td><a [routerLink]="['../prodInfo']" [queryParams]="{id:c.id}">{{c.name}}</a></td>
+    <td><a [routerLink]="['../prodInfo']" [queryParams]="{id:c.id}" skipLocationChange="true">{{c.name}}</a></td>
     <td><img src='assets/images/{{c.img}}'/></td>
     <td>{{c.desc}}</td>
   </tr>
