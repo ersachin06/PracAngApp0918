@@ -1,6 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
-import {promise} from 'selenium-webdriver';
+
+
 @Component({
   selector: 'app-c7inbuiltpipes',
   templateUrl: './c7inbuiltpipes.component.html',
@@ -16,10 +17,40 @@ export class C7inbuiltpipesComponent implements OnInit {
   constructor() {
     this.userName=new Promise(function(resolve,reject)
     {
-      setTimeout(()=>{resolve("john Smith");},5000);
-    }
-    );
+      setTimeout(()=> { resolve("john Smith");},1000);
+    });
+var promiseObj=new Promise(
+  function(resolve,reject)
+  {
+      setTimeout(() => {
+        reject("result data");//it return either resolve or reject
+      }, 2000);
   }
+);
+
+    promiseObj.then(
+  function(result1:any)
+  {
+    ///if promise is resolve than this is called
+    console.log("result is "+result1);
+  }
+).catch(function(err1:any)
+{
+  //if proimise is not resolved than this is called
+  console.log("error is "+err1);
+}
+);
+ }
+
+
+  //   this.userName=new Promise(function(resolve,reject)
+  //   {
+  //     setTimeout(()=>{resolve("john Smith");},5000);
+  //   }
+  //   );
+
+  
+  // }
   emp:any[]=[
     {
       EMPNO:7369,
@@ -169,4 +200,6 @@ export class C7inbuiltpipesComponent implements OnInit {
   limitrow:number=this.emp.length;
 
 }
+
+
 
