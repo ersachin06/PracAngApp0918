@@ -21,6 +21,7 @@ export class C12ratinginputoutputComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(" hello");
   }
 
 }
