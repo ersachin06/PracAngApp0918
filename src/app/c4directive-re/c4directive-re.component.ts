@@ -11,10 +11,10 @@ export class C4directiveReComponent implements OnInit {
 
   users:string[]=["johan","sohan","mohan"];
   categories:any[]=[
-    {id:1,name:"laptop",desc:"description",img:"l1.jpg"},
-    {id:2,name:"mobile",desc:"description",img:"m1.jpg"},
-    {id:3,name:"shoes",desc:"description",img:"s1.jpg"},
-    {id:4,name:"clothes",desc:"description",img:"c1.jpg"}
+    {id:1,name:'laptop',desc:'description',img:'l1.jpg'},
+    {id:2,name:'mobile',desc:'description',img:'m1.jpg'},
+    {id:3,name:'shoes',desc:'description',img:'s1.jpg'},
+    {id:4,name:'clothes',desc:'description',img:'c1.jpg'}
 
   ];
   categories2:any[]=[

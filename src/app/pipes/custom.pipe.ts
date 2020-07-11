@@ -16,7 +16,7 @@ export class CustomPipe implements PipeTransform {
 
 @Pipe({
   name: 'customjson',
-  pure:false  // to make pure pipe impure //now we will get chages
+  pure: false  // to make pure pipe impure //now we will get chages
 })
 export class CustomJSONPipe implements PipeTransform {
 
@@ -34,6 +34,7 @@ export class CustomJSONPipe implements PipeTransform {
 })
 
 export class FilterPipe implements PipeTransform {
+  //field= job  value='clerk'
   transform(items: any[], field: string, value: string): any[] {
       if (!items) {
           return [];
@@ -41,8 +42,44 @@ export class FilterPipe implements PipeTransform {
       if (!field || !value) {
           return items;
       }
-      console.log("icsd tech labs 1 "+JSON.stringify(items.filter(singleItem => singleItem[field].toLowerCase().includes(value.toLowerCase()))));
+// tslint:disable-next-line: max-line-length
+      console.log('icsd tech labs 1 ' + JSON.stringify(items.filter(singleItem => singleItem[field].toLowerCase().includes(value.toLowerCase()))));
 
-      return items.filter(singleItem => singleItem[field].toLowerCase().includes(value.toLowerCase()));
+      //
+      // var heroes = [
+      //   {name: “Batman”, franchise: “DC”},
+      //   {name: “Ironman”, franchise: “Marvel”},
+      //   {name: “Thor”, franchise: “Marvel”},
+      //   {name: “Superman”, franchise: “DC”}
+      // ];
+
+      // var marvelHeroes =  heroes.filter(function(hero) {
+      //   return hero.franchise == “Marvel”;
+      // });
+     let x= items.filter(function(item)
+      {
+          let lowercaseitem =item[field].toLowerCase();
+          let res=lowercaseitem.includes(value.toLowerCase());
+          //alert('res is ' +res);
+          return res;//it will return true or false
+      }
+      );
+      alert('json is ' + JSON.stringify(x));//r,eturning 4 objects of clerk if i type clerk
+      alert('x='+ x);//return array of  object 
+      return x;
+     // return items.filter(singleItem => singleItem[field].toLowerCase().includes(value.toLowerCase()));
   }
 }
+
+// A common use case of .filter() is with an array of objects through their properties:
+
+// var heroes = [
+// 	{name: “Batman”, franchise: “DC”},
+// 	{name: “Ironman”, franchise: “Marvel”},
+// 	{name: “Thor”, franchise: “Marvel”},
+// 	{name: “Superman”, franchise: “DC”}
+// ];
+
+// var marvelHeroes =  heroes.filter(function(hero) {
+// 	return hero.franchise == “Marvel”;
+// });

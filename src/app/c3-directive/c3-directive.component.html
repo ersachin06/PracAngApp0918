@@ -8,8 +8,31 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 
+<ul>
+  <li *ngFor="let x of users">
+    {{x}}
+  </li>
+</ul>
+
+
+<table class="table table-bordered table-hover">
+  <tr>
+    <th>catid</th>
+    <th>catname</th>
+    <th>catimg</th>
+    <th>catdesc</th>
+  </tr>
+  <tr *ngFor="let c of categories">
+      <td>{{c.id}}</td>
+      <td>{{c.name}}</td>
+      <td>{{c.img}}</td>
+      <td>{{c.desc}}</td>
+  </tr>
+</table>
+
+
   <h3>c3-directive works!</h3>
-    
+
   <ul>
       <li>deepak</li>
       <li>rohan</li>
@@ -65,8 +88,8 @@
 </div>
 <p>................</p>
 <div *ngIf="categories2.length else falsecondn">
-    
-    
+
+
     <table border="1">
         <tr>
           <th>id</th>
@@ -82,7 +105,7 @@
             <td>{{p.desc}}</td>
             <td><img src='assets/images/{{p.img}}'/></td>
         </tr>
-    
+
     </table>
     </div>
     <ng-template #falsecondn>
@@ -126,8 +149,8 @@
         <th>prod qty</th>
     </tr>
     <ng-container *ngFor="let p of products" >
-     <tr class="bg-success" *ngIf="p.pid==5 && p.price>=30000 && p.catid==3  || p.pid>=6" > 
-        
+     <tr class="bg-success" *ngIf="p.pid==5 && p.price>=30000 && p.catid==3  || p.pid>=6" >
+
         <th>{{p.pid}}</th>
         <th>{{p.catid}}</th>
         <th>{{p.name}}</th>
@@ -136,8 +159,8 @@
         <th>{{p.price}}</th>
         <th>{{p.qty}}</th>
     </tr>
-    <tr class="bg-primary" *ngIf="p.pid==6" > 
-        
+    <tr class="bg-primary" *ngIf="p.pid==6" >
+
         <th>{{p.pid}}</th>
         <th>{{p.catid}}</th>
         <th>{{p.name}}</th>
@@ -198,7 +221,7 @@
         <th>{{p.qty}}</th>
     </tr>
     <tr class="bg-danger" *ngSwitchCase='3'>
-        
+
                 <th>{{p.pid}}</th>
                 <th>{{p.catid}}</th>
                 <th>{{p.name}}</th>
