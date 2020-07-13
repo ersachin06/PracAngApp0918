@@ -24,6 +24,7 @@ Enter name <input type="text" [(ngModel)]="emp[0].ename"/>
         <th>Job</th>
         <th>MGR</th>
         <th>HIREDATE</th>
+        <th>Experience</th>
         <th>SAL</th>
         <th>COMM</th>
         <th>DEPTNOo</th>
@@ -35,6 +36,7 @@ Enter name <input type="text" [(ngModel)]="emp[0].ename"/>
         <td>{{e.JOB}}</td>
         <td>{{e.MGR}}</td>
         <td>{{e.HIREDATE }}</td>
+        <td>{{e.HIREDATE | experience }}</td>
         <td>{{e.SAL}}</td>
         <td>{{e.COMM}}</td>
         <td>{{e.DEPTNO}}</td>

@@ -17,7 +17,7 @@ import { C4directiveReComponent } from './c4directive-re/c4directive-re.componen
 import { C5AtbtDirectiveComponent } from './c5-atbt-directive/c5-atbt-directive.component';
 import { C6imgdispthclickComponent } from './c6imgdispthclick/c6imgdispthclick.component';
 import { C7inbuiltpipesComponent } from './c7inbuiltpipes/c7inbuiltpipes.component';
-import { CustomPipe,CustomJSONPipe,FilterPipe } from './pipes/custom.pipe';
+import { CustomPipe,CustomJSONPipe,FilterPipe,ExperiencePipe } from './pipes/custom.pipe';
 import { C8custompipesComponent } from './c8custompipes/c8custompipes.component';
 import { CustomeJsonPipePipe } from './pipes/custome-json-pipe.pipe';
 import { C1pracComponent } from './prac/c1prac/c1prac.component';
@@ -75,6 +75,7 @@ import { DummytestComponent } from './dummytest/dummytest.component';
     CustomeJsonPipePipe,
     CustomJSONPipe,
     FilterPipe,
+    ExperiencePipe,
     C1pracComponent,
     V1Component,
     S1Component,

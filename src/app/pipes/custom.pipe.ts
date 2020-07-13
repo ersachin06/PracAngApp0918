@@ -29,10 +29,26 @@ export class CustomJSONPipe implements PipeTransform {
 }
 
 
+
+@Pipe({
+  name: 'experience'
+})
+export class ExperiencePipe implements PipeTransform
+{
+  transform(value: any) :any
+  {
+    let y1=new Date().getFullYear();
+    let joiningDate=new Date(value).getFullYear();
+    let exp= y1-joiningDate;
+    return exp;
+    
+  }
+  
+}
+
 @Pipe({
   name: 'filter'
 })
-
 export class FilterPipe implements PipeTransform {
   //field= job  value='clerk'
   transform(items: any[], field: string, value: string): any[] {

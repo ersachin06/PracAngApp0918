@@ -18,7 +18,7 @@ export class C8custompipesComponent implements OnInit {
       ENAME:"SMITH",
       JOB:"CLERK",
       MGR:7902,
-      HIREDATE:new Date('17/12/1980'),
+      HIREDATE:new Date('12/17/1980'),
       SAL:800,
       COMM:null,
       DEPTNO:20
@@ -28,7 +28,7 @@ export class C8custompipesComponent implements OnInit {
       ENAME:"ALLEN",
       JOB:"SALESMAN",
       MGR:7698,
-      HIREDATE:new Date('20/02/1981'),
+      HIREDATE:new Date('02/20/1981'),
       SAL:1600,
       COMM:300,
       DEPTNO:30
@@ -38,7 +38,7 @@ export class C8custompipesComponent implements OnInit {
       ENAME:"WARD",
       JOB:"SALESMAN",
       MGR:7698,
-      HIREDATE:new Date('22/02/1981'),
+      HIREDATE:new Date('02/22/1981'),
       SAL:1250,
       COMM:500,
       DEPTNO:30
@@ -48,7 +48,7 @@ export class C8custompipesComponent implements OnInit {
       ENAME:"JONES",
       JOB:"MANAGER",
       MGR:7839,
-      HIREDATE:new Date('02/04/1981'),
+      HIREDATE:new Date('04/02/1981'),
       SAL:2975,
       COMM:null,
       DEPTNO:20
@@ -58,7 +58,7 @@ export class C8custompipesComponent implements OnInit {
       ENAME:"MARTIN",
       JOB:"SALESMAN",
       MGR:7698,
-      HIREDATE:new Date('28/09/1981'),
+      HIREDATE:new Date('09/28/1981'),
       SAL:1250,
       COMM:500,
       DEPTNO:30
@@ -68,7 +68,7 @@ export class C8custompipesComponent implements OnInit {
       ENAME:"BLAKE",
       JOB:"MANAGER",
       MGR:7839,
-      HIREDATE:new Date('01/05/1981'),
+      HIREDATE:new Date('05/01/1981'),
       SAL:2650,
       COMM:null,
       DEPTNO:30
@@ -78,7 +78,7 @@ export class C8custompipesComponent implements OnInit {
       ENAME:"CLARK",
       JOB:"MANAGER",
       MGR:7839,
-      HIREDATE:new Date('09/06/1981'),
+      HIREDATE:new Date('06/09/1981'),
       SAL:2450,
       COMM:null,
       DEPTNO:10
@@ -88,7 +88,7 @@ export class C8custompipesComponent implements OnInit {
       ENAME:"SCOTT",
       JOB:"ANALYST",
       MGR:7566,
-      HIREDATE:new Date('19/04/1987'),
+      HIREDATE:new Date('04/19/1987'),
       SAL:3000,
       COMM:null,
       DEPTNO:20
@@ -98,7 +98,7 @@ export class C8custompipesComponent implements OnInit {
       ENAME:"KING",
       JOB:"PRESIDENT",
       MGR:null,
-      HIREDATE:new Date('17/11/1981'),
+      HIREDATE:new Date('11/17/1981'),
       SAL:5000,
       COMM:null,
       DEPTNO:10
@@ -108,7 +108,7 @@ export class C8custompipesComponent implements OnInit {
       ENAME:"TURNER",
       JOB:"SALESMAN",
       MGR:7698,
-      HIREDATE:new Date('08/09/1981'),
+      HIREDATE:new Date('09/08/1981'),
       SAL:1500,
       COMM:0,
       DEPTNO:30
@@ -118,7 +118,7 @@ export class C8custompipesComponent implements OnInit {
       ENAME:"ADAMS",
       JOB:"CLERK",
       MGR:7788,
-      HIREDATE:new Date('23/05/1987'),
+      HIREDATE:new Date('05/23/1987'),
       SAL:1100,
       COMM:null,
       DEPTNO:20
@@ -128,7 +128,7 @@ export class C8custompipesComponent implements OnInit {
       ENAME:"JAMES",
       JOB:"CLERK",
       MGR:7698,
-      HIREDATE:new Date('03/12/1981'),
+      HIREDATE:new Date('12/03/1981'),
       SAL:950,
       COMM:null,
       DEPTNO:30
@@ -138,7 +138,7 @@ export class C8custompipesComponent implements OnInit {
       ENAME:"FORD",
       JOB:"ANALYST",
       MGR:7566,
-      HIREDATE:new Date('03/12/1981'),
+      HIREDATE:new Date('12/03/1981'),
       SAL:3000,
       COMM:null,
       DEPTNO:20
@@ -148,7 +148,7 @@ export class C8custompipesComponent implements OnInit {
       ENAME:"MILLER",
       JOB:"CLERK",
       MGR:7782,
-      HIREDATE:new Date('23/01/1982'),
+      HIREDATE:new Date('01/23/1982'),
       SAL:1300,
       COMM:null,
       DEPTNO:10
