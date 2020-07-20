@@ -54,6 +54,7 @@ import { V4imgvishideComponent } from './v4imgvishide/v4imgvishide.component';
 import {routes} from './Routes';
 import { Temp99Component } from './temp99/temp99.component';
 import { DummytestComponent } from './dummytest/dummytest.component';
+import { C2propbindingComponent } from './c2propbinding/c2propbinding.component';
 
 
 @NgModule({
@@ -107,7 +108,8 @@ import { DummytestComponent } from './dummytest/dummytest.component';
     C24panelComponent,
     V4imgvishideComponent,
     Temp99Component,
-    DummytestComponent
+    DummytestComponent,
+    C2propbindingComponent
 
   ],
   imports: [
