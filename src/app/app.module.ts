@@ -55,6 +55,7 @@ import {routes} from './Routes';
 import { Temp99Component } from './temp99/temp99.component';
 import { DummytestComponent } from './dummytest/dummytest.component';
 import { C2propbindingComponent } from './c2propbinding/c2propbinding.component';
+import { C6localrefcontentviewchildComponent } from './c6localrefcontentviewchild/c6localrefcontentviewchild.component';
 
 
 @NgModule({
@@ -109,7 +110,8 @@ import { C2propbindingComponent } from './c2propbinding/c2propbinding.component'
     V4imgvishideComponent,
     Temp99Component,
     DummytestComponent,
-    C2propbindingComponent
+    C2propbindingComponent,
+    C6localrefcontentviewchildComponent
 
   ],
   imports: [

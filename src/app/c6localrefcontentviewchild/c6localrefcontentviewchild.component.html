@@ -1,0 +1,11 @@
+<p>c6localrefcontentviewchild works!</p>
+<!-- it will display content of component 
+
+
+-->
+<ng-content></ng-content>
+
+<img [src]="src" #img >
+<img [src]="src" #imgVC >
+ <input type="button" value="click" (click)="fun(img)"/> 
+ <!--not recomended way to pass element from html to ts -->

@@ -19,5 +19,6 @@ export class C2PracTillbindingComponent implements OnInit {
 
   ngOnInit() {
   }
+  
 
 }

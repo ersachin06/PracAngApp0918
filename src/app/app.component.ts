@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ICSD Tech Labs';
+  c6localfun()
+  {
+    alert("Btn clicked");
+  }
 }
